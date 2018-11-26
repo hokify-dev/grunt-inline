@@ -206,7 +206,7 @@ module.exports = function(grunt) {
 
 			return matchedWord.replace(imgUrl, newUrl);
 		});
-		fileContent = options.cssmin ? CleanCSS.process(fileContent) : fileContent;
+		fileContent = options.cssmin ? new CleanCSS().minify(fileContent) : fileContent;
 
 		return fileContent;
 	}
@@ -240,7 +240,7 @@ module.exports = function(grunt) {
 
 			return matchedWord.replace(imgUrl, newUrl);
 		});
-		fileContent = options.cssmin ? CleanCSS.process(fileContent) : fileContent;
+		fileContent = options.cssmin ? new CleanCSS().minify(fileContent) : fileContent;
 
 		return fileContent;
 	}
